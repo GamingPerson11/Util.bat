@@ -17,7 +17,7 @@ echo .
 echo 1) Shutdown
 echo 2) Reboot
 echo 3) Start Discord
-echo 5) Date And Time
+echo 4) Date And Time
 echo -
 echo enter "custom" for customization
 echo -
