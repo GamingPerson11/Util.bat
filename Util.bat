@@ -14,7 +14,6 @@ echo .                   #######     ##    #### ######## ### ########  ##     ##
 echo .
 echo .
 
-echo test
 echo 1) Shutdown
 echo 2) Reboot
 echo 3) Start Discord
