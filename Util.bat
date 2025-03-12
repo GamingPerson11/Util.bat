@@ -1,5 +1,6 @@
 @echo off
 if exist custmcolor.txt (
+	::Credits to ChatGPT for making this one line of code
 	for /f "delims=" %%A in ('type custmcolor.txt') do set custmclrfile=%%A
 ) else (
 	color 9
