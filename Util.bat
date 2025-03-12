@@ -1,5 +1,11 @@
 @echo off
-color 9
+if exist custmcolor.txt (
+	for /f "delims=" %%A in ('type custmcolor.txt') do set custmclrfile=%%A
+) else (
+	color 9
+)
+color %custmclrfile%
+
 title Util.bat
 set startpath=%cd%
 :begin
@@ -88,6 +94,11 @@ if "%colorop%"=="4" color 4
 if "%colorop%"=="5" color 5
 if "%colorop%"=="6" color 7
 if "%colorop%"=="7" color 8
+
+if "%colorop%"=="7" set colorop=8
+if "%colorop%"=="6" set colorop=7
+echo %colorop% >custmcolor.txt
+
 cls
 goto custm
 
@@ -102,4 +113,5 @@ echo "back" to return
 set /p custmclrop=Enter custom color here (command version): 
 if "%custmclrop%"=="back" goto custm
 color %custmclrop%
+echo %custmclrop% >%startpath%\custmcolor.txt
 goto custmclr
