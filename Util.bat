@@ -1,6 +1,6 @@
 @echo off
 if exist custmcolor.txt (
-	::Credits to ChatGPT for making this one line of code
+	:: Credits to ChatGPT for making this one line of code
 	for /f "delims=" %%A in ('type custmcolor.txt') do set custmclrfile=%%A
 ) else (
 	color 9
@@ -108,7 +108,7 @@ cls
 echo Hello, %USERNAME%, this is custom color selection, it uses the command version of colors.
 echo -
 echo For example, it is "a" for bright green or "f" for white.
-echo You can open a cmd window and do "color ?" to see the commands that you can do.
+echo Enter "?" for help.
 echo -
 echo "back" to return
 set /p custmclrop=Enter custom color here (command version): 
