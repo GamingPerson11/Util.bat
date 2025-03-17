@@ -29,9 +29,9 @@ echo 1) Shutdown
 echo 2) Reboot
 echo 3) Start Discord
 echo 4) Date And Time
-echo -
+echo:
 echo enter "custom" for customization
-echo -
+echo:
 
 :selection
 set /p op=Type your selection here!: 
