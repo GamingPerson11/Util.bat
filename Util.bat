@@ -62,7 +62,7 @@ goto begin
 :timeanddate
 cls
 echo Your current time is: %time%
-echo -
+echo:
 echo Your current date is: %date%
 pause /nobreak>nul
 cls
@@ -72,7 +72,7 @@ goto begin
 cls
 echo Hello, %USERNAME%! you have entered customization mode, what would you like to do?
 echo "back" to return.
-echo -
+echo:
 echo 1) Color selection
 echo 2) Custom color
 
@@ -90,7 +90,7 @@ echo 4) Red
 echo 5) Purple
 echo 6) White
 echo 7) Gray
-echo -
+echo:
 set /p colorop=Type your color here: 
 if "%colorop%"=="1" color 1
 if "%colorop%"=="2" color 2
@@ -110,10 +110,10 @@ goto custm
 :custmclr
 cls
 echo Hello, %USERNAME%, this is custom color selection, it uses the command version of colors.
-echo -
+echo:
 echo For example, it is "a" for bright green or "f" for white.
 echo Enter "?" for help.
-echo -
+echo:
 echo "back" to return
 set /p custmclrop=Enter custom color here (command version): 
 if "%custmclrop%"=="back" goto custm
