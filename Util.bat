@@ -54,6 +54,12 @@ goto selection
 cls
 cd %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc
 start Discord.lnk
+if "%errorlevel%"=="0" (
+	goto finish
+) else (
+	start https://discord.com/channels/@me
+)
+:finish
 cd %startpath%
 echo complete!
 timeout /t 3 /nobreak>nul
