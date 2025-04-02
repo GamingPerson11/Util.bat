@@ -29,6 +29,7 @@ echo 1) Shutdown
 echo 2) Reboot
 echo 3) Start Discord
 echo 4) Date And Time
+echo 5) Exit
 echo:
 echo enter "custom" for customization
 echo:
@@ -39,15 +40,18 @@ if "%op%"=="1" goto shutdown
 if "%op%"=="2" goto reboot
 if "%op%"=="3" goto dscstart
 if "%op%"=="4" goto timeanddate
+if "%op%"=="5" exit
 if "%op%"=="custom" goto custm
 
 goto begin
 :shutdown
 shutdown /p /f
+cls
 goto selection
 
 :reboot
 shutdown /r /t 0
+cls
 goto selection
 
 :dscstart
