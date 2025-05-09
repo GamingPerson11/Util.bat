@@ -29,7 +29,8 @@ echo 1) Shutdown
 echo 2) Reboot
 echo 3) Start Discord
 echo 4) Date And Time
-echo 5) Exit
+echo 5) Start Chrome
+echo 6) Exit
 echo:
 echo enter "custom" for customization
 echo:
@@ -40,7 +41,8 @@ if "%op%"=="1" goto shutdown
 if "%op%"=="2" goto reboot
 if "%op%"=="3" goto dscstart
 if "%op%"=="4" goto timeanddate
-if "%op%"=="5" exit
+if "%op%"=="5" goto chrome
+if "%op%"=="6" exit
 if "%op%"=="custom" goto custm
 
 goto begin
@@ -76,6 +78,13 @@ echo:
 echo Your current date is: %date%
 pause /nobreak>nul
 cls
+goto begin
+
+:chrome
+cls
+start C:\ProgramData\Microsoft\Windows\"Start Menu"\Programs\"Google Chrome.lnk"
+echo complete!
+timeout /t 3 /nobreak>nul
 goto begin
 
 :custm
